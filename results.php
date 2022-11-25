@@ -33,6 +33,10 @@ $badword = $_GET['badword'];
             </div>
         </div>
 
+        <div class="back">
+            <a href="index.php" class="btn btn-danger" role="button">Back</a>
+        </div>
+
 
 
         
