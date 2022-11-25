@@ -2,6 +2,7 @@
 
 $paragraph = $_GET['paragraph'];
 $badword = $_GET['badword'];
+$censoredParagraph = str_ireplace($badword, '***', $paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +28,9 @@ $badword = $_GET['badword'];
 
         <div class="paragraph_censored py-3">
             <h2 class="text-secondary mb-3">Censored paragraph:</h2>
-            <p><?php echo str_ireplace($badword, '***', $paragraph); ?></p>
+            <p><?php echo $censoredParagraph; ?></p>
             <div class="paragraph_length">
-                <p class="fw-semibold">Paragraph length is <?php echo strlen($paragraph); ?></p>
+                <p class="fw-semibold">Paragraph length is <?php echo strlen($censoredParagraph); ?></p>
             </div>
         </div>
 
